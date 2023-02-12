@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8">
   <title>Social Login</title>
@@ -7,6 +7,7 @@
 <body>
   <h1>Social Login</h1>
 
+  <p>Welcome <span th:text="${name}"></span></p>
   <p>You're logged in</p>
 </body>
 </html>
