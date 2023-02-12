@@ -9,3 +9,23 @@ spring:
           google:
             clientId: ${GOOGLE_CLIENT_ID}
             clientSecret: ${GOOGLE_CLIENT_SECRET}
+
+          linkedin:
+            clientId: ${LINKEDIN_CLIENT_ID}
+            clientSecret: ${LINKEDIN_CLIENT_SECRET}
+            clientAuthenticationMethod: client_secret_post
+            authorizationGrantType: authorization_code
+            redirectUri: "{baseUrl}/login/oauth2/code/{registrationId}"
+            scope: r_liteprofile,r_emailaddress
+            clientName: LinkedIn
+
+        provider:
+          linkedin:
+            authorizationUri: https://www.linkedin.com/oauth/v2/authorization
+            tokenUri: https://www.linkedin.com/oauth/v2/accessToken
+            userInfoUri: https://api.linkedin.com/v2/me
+            userNameAttribute: id
+
+logging:
+  level:
+    org.springframework.security: TRACE

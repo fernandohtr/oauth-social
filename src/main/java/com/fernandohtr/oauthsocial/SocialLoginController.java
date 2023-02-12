@@ -12,4 +12,7 @@ public class SocialLoginController {
     public String getHomePage() {
         return "index";
     }
+
+    @GetMapping("/login")
+    public String getLogin() { return "login"; }
 }
